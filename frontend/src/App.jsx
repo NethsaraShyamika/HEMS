@@ -5,6 +5,9 @@ import HRDashboard from "./Pages/HR/HRDashboard";
 import AdminDashboard from "./Pages/Admin/AdminDashboard";
 import EmployeeDashboard from "./Pages/Employee/EmployeeDashboard";
 
+// HR Pages
+import SchedulePage from "./Pages/HR/SchedulePage"; // ✅ import schedules page
+
 function App() {
   return (
     <Router>
@@ -14,6 +17,7 @@ function App() {
 
         {/* Dashboards */}
         <Route path="/hr" element={<HRDashboard />} />
+        <Route path="/hr/schedules" element={<SchedulePage />} /> {/* ✅ Added */}
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/employee" element={<EmployeeDashboard />} />
 
