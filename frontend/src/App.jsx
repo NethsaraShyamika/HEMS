@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import HRDashboard from "./Pages/HR/HRDashboard";
 import AdminDashboard from "./Pages/Admin/AdminDashboard";
 import EmployeeDashboard from "./Pages/Employee/EmployeeDashboard";
+import Login from "./Pages/Admin/Login";
+import Home from "./Pages/home"; // ✅ import home page
 
 // HR Pages
 import SchedulePage from "./Pages/HR/SchedulePage"; // ✅ import schedules page
@@ -13,10 +15,12 @@ function App() {
     <Router>
       <Routes>
         {/* Redirect root → HR by default (can change later) */}
-        <Route path="/" element={<Navigate to="/hr" replace />} />
+        <Route path="/" element={<Navigate to="/home" replace />} />
 
         {/* Dashboards */}
+        <Route path="/home" element={<Home />} />
         <Route path="/hr" element={<HRDashboard />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/hr/schedules" element={<SchedulePage />} /> {/* ✅ Added */}
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/employee" element={<EmployeeDashboard />} />

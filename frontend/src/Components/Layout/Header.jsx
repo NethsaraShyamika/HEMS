@@ -87,8 +87,8 @@ function Header() {
             {[
               { to: "/hr", label: "Dashboard" },
               { to: "/leave", label: "Employees" },
-              { to: "/attendance", label: "Scheduling" },
-              { to: "/performance", label: "Salary" },
+              { to: "/hr/schedules", label: "Scheduling" },
+              { to: "/performance", label: "Salary" }
             ].map((item) => (
               <li key={item.to}>
                 <Link
