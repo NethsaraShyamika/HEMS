@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import HRDashboard from "./Pages/HR/HRDashboard";
 import AdminDashboard from "./Pages/Admin/AdminDashboard";
 import EmployeeDashboard from "./Pages/Employee/EmployeeDashboard";
+import Login from "./Pages/Admin/Login";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
 
         {/* Dashboards */}
         <Route path="/hr" element={<HRDashboard />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/employee" element={<EmployeeDashboard />} />
 
